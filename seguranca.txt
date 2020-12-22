@@ -4,6 +4,116 @@
 - Cross Site Request Forgery (CSRF)
     - csrf_token
     - autentica os tokens pra evitar que atravessem os dados
+Dados da mensagem
+[Segurança]
+- Cross Site Scripting (XSS): Contra inject html/js
+- CSRF token nos formularios pra evitar dados atravessados
+- Anti SQL Injection Django
+- HTTPS
+- TLS para disparo de e-mail, casa haja
+- acesso apenas SSH-keys para servidor hospedado
+- HSTS incluindo subdominios
+- NOSNIFF pra content type
+- session cookie secure e http only
+- X-FRAME pra 'Deny'
+- SSL redirect
+- armazenamento de BD pra senhas com hash SHA256
+- honeypot no /admin padrão
+13:28
+Lida por
+￼
+Natália Cris
+hoje às 13:28
+Entregue para
+Resta 1
+￼
+Cristiano Da Matta
+hoje às 14:15
+￼
+￼Procurar ou começar uma nova conversa
+￼
+Marcia 4
+10:33
+Vídeo
+￼
+SWOT - domingo 18h30
+Ontem
+Cristiano
+:
+hahahah
+￼
+Rodrigo Fm
+Sexta-feira
+De qq forma acho q nao passa do 1 semestre de 2022
+￼
+WILLIAM
+13:13
+Foto
+￼
+Cristiano Da Matta
+10:09
+Foto
+￼
+Marcia 3
+10:26
+Foto
+￼
+RPG dos cria
+Ontem
+Kronus
+:
+Sad
+￼
+Agora é DUDU
+13:23
+Rodrigo
+:
+Foto
+￼
+Daniel Santos
+23:22
+Kkkkk
+￼
+André Franco
+Ontem
+￼
+￼
+DPE RJ - TMD Capital
+15:39
++55 21 99383-0270
+:
+￼￼…
+8
+￼
+Helvio Monteiro
+Ontem
+mas eh foda, eles precisam de personagen + integrados
+￼
+André Trindade
+Sábado
+o resto é agregado
+￼
+Expresso inc
+13:28
+[Segurança] - Cross Site Scripting (XSS): Contra inject html/js - CSRF token nos formularios pra evitar dados atravessados - Anti SQL Injection Django - HTTPS - TLS para disparo de e-mail, casa haja - acesso apenas SSH-keys para servidor hospedado - HSTS incluindo subdominios - NOSNIFF pra content type - session cookie secure e http only  - X-FRAME pra 'Deny' - SSL redirect - armazenamento de BD pra senhas com hash SHA256 - honeypot no /admin padrão
+￼
+T.O.A - quinta 18:30￼
+16:07
+Helvio
+:
+Jogar sexta?
+1
+￼
+Gil Rpg
+Domingo
+Mas esse foi o gancho que eu peguei
+￼
+Chagdud Gonpa Odsal Ling
+Ontem
+Hoje é dia de Tara!  21 dez.  19h | Tsog de Tara Vermelha …
+￼
+Expresso inc
+Cristiano, Natália, Você
 
 - SQL injection
 
@@ -16,3 +126,17 @@
 - Honeypot
     - /admin fake
 
+SECURE_HSTS_SECONDS = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+X_FRAME_OPTIONS = 'DENY'
+
+# HTTPS
+# SECURE_SSL_REDIRECT = True
+
+
+- Recaptcha

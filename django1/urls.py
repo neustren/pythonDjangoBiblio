@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('neuadmin/', admin.site.urls),
     path('relatorio/', include('relatorio.urls')),
+    path('facedjango/', include('facedjango.urls')),
 ]

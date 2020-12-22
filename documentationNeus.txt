@@ -62,3 +62,7 @@ heroku logs --tail
 heroku run python manage.py createsuperuser
 heroku pg:reset DATABASE_URL
 heroku run python manage.py migrate
+
+# Pacotes pip
+pip install social-auth-app-django # todos sociais
+pip install django-bootstrap4 # Bootstrap
