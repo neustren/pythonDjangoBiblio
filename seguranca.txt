@@ -1,0 +1,18 @@
+- Cross Site Scripting (XSS)
+    - Inject de script server-side HTMl/JS
+
+- Cross Site Request Forgery (CSRF)
+    - csrf_token
+    - autentica os tokens pra evitar que atravessem os dados
+
+- SQL injection
+
+- HTTPS e TLS
+
+- Armazenamento seguro de senhas:
+    - criptografia de dados sensíveis e senhas no BD
+    - PBKDF2 com hash SHA256
+
+- Honeypot
+    - /admin fake
+
