@@ -130,7 +130,7 @@ SECURE_HSTS_SECONDS = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
-SESSION_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 X_FRAME_OPTIONS = 'DENY'
@@ -144,6 +144,22 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 LOGIN_URL = '/facedjango/login'
-LOGIN_REDIRECT_URL = '/facedjango/index'
+LOGIN_REDIRECT_URL = '/facedjango'
 LOGOUT_URL = '/facedjango/logout'
 LOGOUT_REDIRECT_URL = '/facedjango/login'
+
+SOCIAL_AUTH_RAISE_EXPCETIONS = False # se ja existir, loga, se nao existir, cria
+
+# Configurações para Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '1269064363463617'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'c80e319872b9dc7199028c91217d60fd'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email, picture.type(large), link'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+]
