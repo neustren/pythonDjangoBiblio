@@ -21,6 +21,7 @@ urlpatterns = [
     path('neuadmin/', admin.site.urls),
     path('relatorio/', include('relatorio.urls')),
     path('crud/', include('crud.urls')),
+    path('paginacao/', include('paginacao.urls')),
     path('facedjango/', include('facedjango.urls')),
 
 ]

@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'facedjango',
     'crud',
     'django.contrib.humanize',
+    'paginacao',
+
 ]
 
 MIDDLEWARE = [
