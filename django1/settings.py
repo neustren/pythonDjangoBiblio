@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'social_django',
     'facedjango',
+    'crud',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [

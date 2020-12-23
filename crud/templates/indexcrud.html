@@ -1,0 +1,33 @@
+{% extends 'basecrud.html' %}
+{% load humanize %}
+{% block content %}
+<div class="row">
+    <h1>Produtos</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in produtos %}
+            <tr>
+                <td>{{p.id}}</td>
+                <td>{{p.nome}}</td>
+                <td>R$ {{p.preco|intcomma}}</td>
+                <td>
+                    <a class="btn btn-warning" href="{% url 'upd produto' p.pk %}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'del produto' p.pk %}">Deletar</a>
+                    <a class="btn btn-danger" href="{% url 'purge produto' p.pk %}">Purge</a>
+                </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'basecrud.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <h1>Produtos</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p> Tem certeza que deseja deletar o produto "{{ object }}"</p>
+       {#% bootstrap_form form %#}
+            {% buttons %}
+                <button type="submit" class="btn btn-danger">Confirmar</button>
+                <button type="button" class="btn btn-warning">
+                    <a href="{% url 'indexcrud' %}">Cancelar</a>
+                </button>
+            {% endbuttons %}
+    </form>
+{% endblock %}
