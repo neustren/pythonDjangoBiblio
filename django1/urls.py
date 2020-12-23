@@ -25,3 +25,7 @@ urlpatterns = [
     path('facedjango/', include('facedjango.urls')),
 
 ]
+
+admin.AdminSite.site_header = "Sistema XYZ"
+admin.AdminSite.site_title = "Geek University"
+admin.AdminSite.index_title = "Meu sistema super legal"
