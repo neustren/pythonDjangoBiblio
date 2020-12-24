@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -46,10 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'paginacao',
     'usuarios',
+    'fusion'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',  # automatiza detecção de linguagem pelo navegador
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -154,7 +156,7 @@ LOGIN_REDIRECT_URL = '/facedjango'
 LOGOUT_URL = '/facedjango/logout'
 LOGOUT_REDIRECT_URL = '/facedjango/login'
 
-SOCIAL_AUTH_RAISE_EXPCETIONS = False # se ja existir, loga, se nao existir, cria
+SOCIAL_AUTH_RAISE_EXPCETIONS = False  # se ja existir, loga, se nao existir, cria
 
 # Configurações para Facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '1269064363463617'
@@ -169,3 +171,7 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
     ('picture', 'picture'),
     ('link', 'profile_url'),
 ]
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)

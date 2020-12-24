@@ -68,3 +68,7 @@ heroku run python manage.py migrate
 pip install django # django
 pip install social-auth-app-django # todos sociais
 pip install django-bootstrap4 # Bootstrap
+
+# Traducao blob
+from textblo import Textblob
+texto = TextBlob('Evolua seu lado geek!').translate(to='en')

@@ -23,6 +23,7 @@ urlpatterns = [
     path('crud/', include('crud.urls')),
     path('paginacao/', include('paginacao.urls')),
     path('facedjango/', include('facedjango.urls')),
+    path('fusion/', include('fusion.urls')),
 
 ]
 
